@@ -2,37 +2,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/enter_search"
+        android:id="@+id/etUser"
         android:layout_width="100dp"
         android:layout_height="20dp"
-        android:layout_marginTop="32dp"
         android:layout_gravity="center"
-        android:hint="ID"/>
+        android:layout_marginTop="32dp"
+        android:hint="ID" />
 
     <Button
-        android:id="@+id/b_search"
+        android:id="@+id/bSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Запрос"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:text="Запрос" />
 
     <EditText
-        android:id="@+id/enter_filter"
+        android:id="@+id/etFilter"
         android:layout_width="100dp"
         android:layout_height="20dp"
         android:layout_gravity="center"
-        android:hint="Filters"/>
+        android:hint="Filters" />
 
-    <ListView
-        android:id="@+id/lv_print"
-        android:layout_width="100dp"
-        android:layout_height="20dp"
-        android:layout_gravity="center">
-
-    </ListView>
-
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
 
 </LinearLayout>
